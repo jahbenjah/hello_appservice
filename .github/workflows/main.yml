@@ -7,7 +7,7 @@ env:
   AZURE_WEBAPP_PACKAGE_PATH: '.'
   DOTNET_VERSION: '6.0.x'
   IGNITE2022MX_ARTIFACT: ignite2022mx-app
-  AZURE_WEBAPP_NAME: wapp-wapp-bc01
+  AZURE_WEBAPP_NAME: wapp-bc01
   RESOURCE_GROUP_NAME: ignite-rg
 
 jobs:
@@ -45,8 +45,8 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ env.RESOURCE_GROUP_NAME }}
         template: ./IaC/deploy-appservice.bicep
-        # parameters: appName=<Type a unique name for yor webapp>
-        parameters: ./IaC/parameters-appservice.json
+        parameters: appName=wapp-bc01
+        # parameters: ./IaC/parameters-appservice.json
         
   ci:
     runs-on: windows-latest
