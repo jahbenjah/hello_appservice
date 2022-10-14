@@ -20,5 +20,5 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.RESOURCE_GROUP_NAME }}
         template: ./IaC/deploy-appservice.bicep
-        # parameters: appName=<Type a unique name for yor webapp>
-        parameters: ./IaC/parameters-appservice.json
+        parameters: appName=wapp-bc01
+        #parameters: ./IaC/parameters-appservice.json
