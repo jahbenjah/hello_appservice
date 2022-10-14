@@ -3,8 +3,8 @@ param skuCapacity int = 1
 param location string = resourceGroup().location
 param appName string = uniqueString(resourceGroup().id)
 
-var appServicePlanName = toLower('asp-${appName}')
-var webSiteName = toLower('wapp-${appName}')
+var appServicePlanName = toLower('${appName}')
+var webSiteName = toLower('${appName}')
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2020-06-01' = {
   name: appServicePlanName // app serivce plan name
