@@ -7,7 +7,7 @@ env:
   AZURE_WEBAPP_PACKAGE_PATH: '.'
   DOTNET_VERSION: '6.0.x'
   IGNITE2022MX_ARTIFACT: ignite2022mx-app
-  AZURE_WEBAPP_NAME: wapp-bc01
+  AZURE_WEBAPP_NAME: wapp-wapp-bc01
   RESOURCE_GROUP_NAME: ignite-rg
 
 jobs:
