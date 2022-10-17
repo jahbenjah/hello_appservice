@@ -49,7 +49,7 @@ jobs:
         # parameters: ./IaC/parameters-appservice.json
         
   ci:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     if: ${{ success() }}
     needs: appservice-bicep-template-deploy
 
@@ -87,7 +87,7 @@ jobs:
           path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp
           
   cd:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     if: ${{ success() }}
     needs: ci
     environment:
